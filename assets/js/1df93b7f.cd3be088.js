@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkswdr_5_docs=self.webpackChunkswdr_5_docs||[]).push([[4583],{6866:(s,e,d)=>{d.r(e),d.d(e,{default:()=>i});d(6540);var c=d(8244),h=d(4848);const i=()=>(0,h.jsx)(c.A,{title:"Home",children:(0,h.jsxs)("div",{style:{padding:"20px"},children:[(0,h.jsx)("h1",{children:"SWDR5 Documentation"}),(0,h.jsx)("p",{children:"This is the home page."})]})})}}]);
