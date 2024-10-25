@@ -1,0 +1,21 @@
+:root {
+  --todo-border-color-light: red;
+  --todo-background-color-light: lightyellow;
+  --todo-text-color-light: black;
+
+  --todo-border-color-dark: red;
+  --todo-background-color-dark: #333333;
+  --todo-text-color-dark: white;
+}
+
+[data-theme="light"] {
+  --todo-border-color: var(--todo-border-color-light);
+  --todo-background-color: var(--todo-background-color-light);
+  --todo-text-color: var(--todo-text-color-light);
+}
+
+[data-theme="dark"] {
+  --todo-border-color: var(--todo-border-color-dark);
+  --todo-background-color: var(--todo-background-color-dark);
+  --todo-text-color: var(--todo-text-color-dark);
+}
