@@ -9,15 +9,15 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://swdr5.docs.ttsk.ngo",
+  url: "https://integrator.docs.ttsk.ngo",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/swdr5-docs/",
+  baseUrl: "/integrator-docs/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "TTSK",
-  projectName: "swdr5-docs", // Usually your repo name.
+  projectName: "integrator-docs", // Usually your repo name.
   deploymentBranch: "gh-pages",
   trailingSlash: false,
 
@@ -41,7 +41,7 @@ const config: Config = {
           include: ["**/*.md", "**/*.mdx"],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/ttsk-ngo/swdr5-docs/tree/main/",
+          editUrl: "https://github.com/ttsk-ngo/integrator-docs/tree/main/",
           remarkPlugins: [require("remark-gfm")],
         },
         theme: {
@@ -62,7 +62,7 @@ const config: Config = {
     announcementBar: {
       id: "announcement-bar",
       content:
-        'If you want to develop the new SWDR5 tool <a target="_blank" rel="noopener noreferrer" href="https://td2.info.pl/rj/application-for-the-swdr5-project/">please read this thread.</a>',
+        'If you want to develop Integrator 2.0 tool please contact XoorbeS</a>',
       backgroundColor: "#fafbfc",
       textColor: "#091E42",
       isCloseable: true,
@@ -85,7 +85,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/ttsk-ngo/swdr5-docs",
+          href: "https://github.com/ttsk-ngo/integrator-docs",
           label: "GitHub",
           position: "right",
         },
