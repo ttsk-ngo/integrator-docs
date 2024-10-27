@@ -101,11 +101,15 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Integrator's repositories",
           items: [
             {
-              label: "testowy link",
-              to: "/docs/Requirements",
+              label: "Documentation repository",
+              href: "https://github.com/ttsk-ngo/integrator-docs",
+            },
+            {
+              label: "API repository",
+              href: "https://github.com/ttsk-ngo/integrator-api",
             },
           ],
         },
