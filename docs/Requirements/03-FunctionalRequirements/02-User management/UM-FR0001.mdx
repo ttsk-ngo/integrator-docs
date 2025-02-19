@@ -1,19 +1,9 @@
 ---
-sidebar_label: UM-FR0001
+sidebar_label: UM-FR0001 - Pending accounts
 ---
 
-# UM-FR0001 - List of the users
+# UM-FR0001 - Pending accounts
+During registration process in TTSK's IdP there is a possibility that a user account may not pass automatical approval. Integrator app has an interface for moderation team members to accept or reject pending accounts. Integrator fetches data about the account from IdP and presents it to the moderation team member. Moderation team members are provided with information on how many accounts are pending approval in their user interfaces.
 
-## General requirements
-
-- List of the users should be visible to anyone, even if banned. 
-- Technical and maintenance accounts should only be visible to users with administration roles.
-- It should be possible to filter the list by username, role, and registration date.
-- Is should be possible to navigate to a particular user's profile directly from the list.
-- The list should provide a text search for usernames.
-- The list should be limited to 30 users per page. 
-- It should be possible to go directly to a DM with a user, provided they have registered with the TTSK chat provider.
-
-## Authorization limitations
-
-List of the users shouldn't be limited to any user role or claim. Technical and maintenence accounts should be hidden from public viewers.
+## Integration with user records and bans
+Integrator automatically searches user records and bans databases by IP address and presents found information to the moderation team.

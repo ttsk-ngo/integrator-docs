@@ -1,8 +1,12 @@
 ---
-sidebar_label: G-FR0001
+sidebar_label: G-FR0001 - Login
 ---
 
-import { FaRegCheckSquare, FaRegSquare } from "react-icons/fa";
-import { FaRegSquareMinus } from "react-icons/fa6";
+# G-FR0001 - Login
+Integrator supports OIDC login as the only login option available for ordinary users. Administators are provided with additional login panel for logging into local accounts.
 
-# G-FR0001 -
+## OIDC login
+Integrator acts as OIDC client app consuming *authorization code flow*.
+
+## Syncing user data
+After each login, Integrator fetches user's data and syncs it with its own resources. Changes made on the IdP side are treated as a priority. Mapping IdP user claims to Integrator's own data records is possible to set in application's settings file. Integrator identifies its users only by `sub` claim.
