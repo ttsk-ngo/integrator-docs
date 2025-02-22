@@ -1,0 +1,67 @@
+---
+sidebar_label: /account
+---
+
+# /account
+This API is created to enable local users to get and maintain their access and refresh tokens.
+
+## /account/login
+```
+POST /account/login?useCookies=false
+```
+
+Request body
+```json
+{
+    "email": "string",
+    "password": "string"
+}
+```
+
+Response HTTP 200 (useCookies=false). Token-based authentication.
+```json
+{
+    "tokenType": "string",
+    "accessToken": "string",
+    "expiresIn": 0,
+    "refreshToken": "string"
+}
+```
+
+Response HTTP 200 body for (useCookies=true - cookie-based authentication) is empty, but the response contains authentication cookie.
+
+## /account/refresh
+This endpoint is used only in token-based authentication scenario to get another access token when the previous one is about to expire.
+```
+POST /account/refresh
+```
+
+Request body
+```json
+{
+    "refreshToken": "string"
+}
+```
+
+Response HTTP 200
+```json
+{
+    "tokenType": "string",
+    "accessToken": "string",
+    "expiresIn": 0,
+    "refreshToken": "string"
+}
+```
+
+## /account/logout
+```
+POST /account/logout
+```
+
+Request
+```json
+{}
+```
+
+Response is HTTP 200 in case of a successful logout.  
+Response is HTTP 401 in case of unauthenticated user calling the endpoint.
