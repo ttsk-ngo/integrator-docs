@@ -1,1 +1,17 @@
 # Logging
+Application logs following data:
+- Time of log entry
+- Logging level
+- correlation id
+- client IP
+- Namespace from where the log was made (context)
+- Log message
+- Exception message\*
+
+\*Only in case of exception logging 
+
+## Core logger
+Core logger logs everything with a logging level equal to or higher than the one set in `appsettings.json`. Core logger logs are stored in `/Integrator.Api/Logs/Core`. Core logger does not log exception messages, which means that only the occurrence of an exception is logged, and the exception logger should be viewed for details.
+
+## Exception logger
+The Exception logger only logs messages with a logging level equal to or higher than “error”, but it also logs exception messages. Exception logger logs are stored in `/Integrator.Api/Logs/Exception`.
