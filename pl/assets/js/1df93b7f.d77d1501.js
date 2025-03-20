@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkswdr_5_docs=self.webpackChunkswdr_5_docs||[]).push([[4583],{6866:(e,s,d)=>{d.r(s),d.d(s,{default:()=>h});d(6540);var t=d(8244),c=d(4848);const h=()=>(0,c.jsx)(t.A,{title:"Home",children:(0,c.jsxs)("div",{style:{padding:"20px"},children:[(0,c.jsx)("h1",{children:"Integrator Documentation"}),(0,c.jsx)("p",{children:"This is the home page."})]})})}}]);
