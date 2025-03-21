@@ -1,0 +1,6 @@
+{
+    "name": "Node.js Alpine",
+    "image": "node:lts-alpine",
+    
+    "postCreateCommand": "apk add --no-cache git curl yarn && npm install -g pnpm"
+}
