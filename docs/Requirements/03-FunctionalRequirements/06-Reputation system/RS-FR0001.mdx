@@ -1,0 +1,26 @@
+---
+sidebar_label: RS-FR0001 - Global View
+---
+
+# RS-FR0001 - Global View
+
+## Description
+
+In the global view, the user can clearly see the status of all indicators that affect their reputation within the simulator. The view is divided into two panes:
+- The general pane, displaying the aggregated reputation for each independent element: e.g., driver reputation, traffic controller reputation, reputation provided by other users, etc.
+- The detailed pane, which breaks down individual aggregated reputations into their components: e.g., passenger train operation, light freight train operation, heavy freight train operation, etc.
+
+## Indicator Types
+
+### Counter Indicators
+
+Indicators of this type do not tend towards a default value and can increase or decrease within a wide range. These indicators are used for monitoring counter-type elements, such as the number of kilometers traveled, average speed, etc.
+
+### Percentage Indicators
+
+Indicators of this type always tend towards the default state. These indicators are used for monitoring elements that can automatically change their value over time due to the user's inactivity. They simulate the "forgetting" of learned things or mistakes made.
+
+## Additional Requirements
+
+- Elements visualizing individual statuses should be displayed in several colors, depending on which threshold - defined individually for each indicator - the current status falls into.
+- Within the status, a trend indicator should also appear, e.g., in the form of an arrow in 'green', 'yellow', and 'red' colors, respectively, for a positive upward trend, no change, and a negative upward trend.
