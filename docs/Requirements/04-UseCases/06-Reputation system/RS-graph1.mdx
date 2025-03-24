@@ -14,7 +14,7 @@ graph TD
     zarzad["Zarząd<br>Skarga na Naczelnika lub Moderatora"]
     nacz["Naczelnicy<br>Skarga na Zarząd"]
     who{"Kto<br>rozpatruje<br>skargę?"}
-    zas{"Skarga<br>zastadna?"}
+    zas{"Skarga<br>zasadna?"}
     orz1["Rozpatrzenie skargi"]
     pom1["Opinia dodatkowych osób na zlecenie rozpatrującego"]
     odw1{"odwołanie?"}
@@ -39,9 +39,4 @@ graph TD
     odw2 -- Nie --> who
     odw2 -- Tak ---> koniec
     odw1 -- Nie ---> koniec
-
-    %% Definiowanie klasy CSS
-    classDef centeredText fill:#f9f,stroke:#333,stroke-width:2px,text-align:center,dominant-baseline:middle,text-anchor:middle;
-    %% Przypisywanie klasy do nodów
-    class mod,nmod centeredText;
 ```
