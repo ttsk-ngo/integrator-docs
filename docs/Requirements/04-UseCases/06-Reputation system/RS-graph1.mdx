@@ -9,7 +9,7 @@ sidebar_label: RS-graph1 - Reputation flow
 graph TD
     subgraph Główny proces
         subgraph Legenda
-            direction TB
+            direction LR
             legendBlue["Moderacja"]
             legendRed["Naczelnik Moderacji,<br>lub osoba upoważniona"]
             legendYellow["Uczestnicy sporu"]
@@ -17,16 +17,16 @@ graph TD
             end
         start(("Start"))
         nowa@{ shape: lean-r, label: "Nowa Skarga"}
-        target1{"Skarga<br>na członeka<br>zespołu?"}
+        target1{"Skarga<br>na członka<br>zespołu?"}
         target2{"Skarga<br>na<br>Naczelnika<br>lub<br>Moderatora?"}
         target3{"Skarga<br>na Zarząd?"}
         mod{{"Moderator 1 instancji"}}
         nmod{{"Naczelnik Moderatorów"}}
         zarzad{{"Zarząd"}}
         nacz{{"Naczelnicy"}}
-        dyskusja["Dyskusja między stronami"]
+        dyskusja["Dyskusja pomiędzy stronami sporu"]
         zas{"Skarga<br>zasadna?"}
-        orz1["Rozpatrzenie skargi przez pierwszą osobę"]
+        orz1["Rozpatrzenie skargi"]
         orz2{"Podrzymanie<br>decyzji?"}
         pom1["Opinia dodatkowych osób na zlecenie rozpatrującego"]
         odw1{"odwołanie?"}
@@ -37,24 +37,23 @@ graph TD
         end
 
     start:::green-->nowa:::user
-    nowa --> target1
-    target1 --> dyskusja:::user
+    nowa ---> target1
+    nowa --> dyskusja:::user
     dyskusja --> zas:::mod
     mod --> zas
     nmod --> zas
     zarzad --> zas
     nacz --> zas
-    zas -- Tak --> orz1:::mod
+    zas -- Tak ---> orz1:::mod
     zas -- Nie --> koniec
-    orz1 <-.-> pom1:::mod
+    orz1 <-..-> pom1:::mod
     orz1 <-.-> zmr:::adm
-    orz1 -- Tak --> target1:::default
-    orz1 -- Nie --> odw2:::default
+    orz1 ---> odw2:::default
     target1 -- Nie --> mod:::adm
     target1 -- Tak --> target2:::default
     target2 -- Nie --> target3:::default
     target2 -- Tak --> zarzad:::adm
-    target3 -- Nie --> nmod:::adm
+    target3 -- Nie ---> nmod:::adm
     target3 -- Tak --> nacz:::adm
 
     odw1 -- Tak --> 2mod:::mod
